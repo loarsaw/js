@@ -27,8 +27,19 @@ export default function MyReactPage() {
   );
 }
 ```
+  <iframe
+      id="inlineFrameExample"
+      title="Javascript"
+      frameborder="0" 
+      scrolling="no"
+      height="400"
+      width="700"
+      src="https://stackblitz.com/edit/js-dfhq4e?ctl=1&embed=1&file=index.js&hideExplorer=1"
+      >
+  </iframe>
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+A new page is now available at [http://localhost:3000/my-react-page](https://stackblitz.com/edit/js-dfhq4e?ctl=1&embed=1&file=index.js&hideExplorer=1).
+
 
 ## Create your first Markdown Page
 
