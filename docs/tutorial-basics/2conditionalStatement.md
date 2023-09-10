@@ -54,7 +54,7 @@ if (condition1) {
       scrolling="no"
       height="400"
       width="700"
-      src="https://stackblitz.com/edit/js-dfhq4e?ctl=1&embed=1&file=index.js&hideExplorer=1"
+      src="https://stackblitz.com/edit/js-dfhq4e?embed=1&file=index.js&hideExplorer=1&hideNavigation=1&view=editor"
       >
 </iframe>
 
@@ -76,7 +76,20 @@ switch(expression) {
   default:
     // case default
 }
+
 ```
+Switch Code
+ <iframe
+      id="inlineFrameExample"
+      title="Javascript"
+      frameborder="0" 
+      scrolling="no"
+      height="400"
+      width="700"
+      src="https://stackblitz.com/edit/js-wcpe3v?ctl=1&embed=1&file=index.js&hideExplorer=1&hideNavigation=1&view=editor"
+      >
+</iframe>
+
 :::note
 
 You can read more about comparison on [Strict Comparison](https://www.freecodecamp.org/news/loose-vs-strict-equality-in-javascript/)
