@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # Loops
 
-Most of the activities we do in life are full of repetitions. Imagine if I ask you to print out from 0 to 100 using console.log(). To implement this simple task it may take you 2 to 5 minutes, such kind of tedious and repetitive task can be carried out using loop. If you prefer watching the videos, you can checkout the [video tutorials](https://www.youtube.com/channel/UCM4xOopkYiPwJqyKsSqL9mw)
+In JavaScript, loops are programming constructs that allow you to repeatedly execute a block of code as long as a certain condition is true or for a specified number of iterations. Loops are essential for automating repetitive tasks and iterating over data structures like arrays and objects. JavaScript provides several types of loops
 
 In programming languages to carry out repetitive task we use different kinds of loops. The following examples are the commonly used loops in JavaScript and other programming languages.
 
@@ -19,44 +19,35 @@ for(initialization, condition, increment/decrement){
 ```
 
 ```js
-for(let i = 0; i <= 5; i++){
+for(let i = 0; i <= 10; i++){
   console.log(i)
 }
 
-// 0 1 2 3 4 5
+// 0 1 2 3 4 5 6 7 8 9 10
 ```
 
 ```js
-for(let i = 5; i >= 0; i--){
+for(let i = 10; i >= 0; i--){
   console.log(i)
 }
 
-// 5 4 3 2 1 0
+// 10 9 8 7 6 5 4 3 2 1 0
 ```
 
 ```js
-for(let i = 0; i <= 5; i++){
-  console.log(`${i} * ${i} = ${i * i}`)
-}
-```
+const cuisines = [
+  "Italian",
+  "Mexican",
+  "Chinese",
+  "Indian",
+];
 
-```sh
-0 * 0 = 0
-1 * 1 = 1
-2 * 2 = 4
-3 * 3 = 9
-4 * 4 = 16
-5 * 5 = 25
-```
-
-```js
-const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 const newArr = []
-for(let i = 0; i < countries.length; i++){
-  newArr.push(countries[i].toUpperCase())
+for(let i = 0; i < cuisines.length; i++){
+  newArr.push(cuisines[i].toUpperCase())
 }
 
-// ["FINLAND", "SWEDEN", "DENMARK", "NORWAY", "ICELAND"]
+// ["Italian", "Mexican", "Chinese", "Indian"]
 ```
 
 Adding all elements in the array
@@ -65,7 +56,7 @@ Adding all elements in the array
 const numbers = [1, 2, 3, 4, 5]
 let sum = 0
 for(let i = 0; i < numbers.length; i++){
-  sum  = sum + numbers[i]  // can be shorten, sum += numbers[i]
+  sum  = sum + numbers[i] 
 
 }
 
@@ -76,24 +67,31 @@ Creating a new array based on the existing array
 
 ```js
 const numbers = [1, 2, 3, 4, 5]
-const newArr = []
+const evenNumberArray = []
 let sum = 0
 for(let i = 0; i < numbers.length; i++){
-  newArr.push( numbers[i] ** 2)
+  if(i%2==0){
+    evenNumberArray.push(numbers[i] ** 2)
+  }
 
 }
 
-console.log(newArr)  // [1, 4, 9, 16, 25]
+console.log(evenNumberArray)  // [1, 4, 9, 16, 25]
 ```
 
 ```js
-const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+const cuisines = [
+  "Italian",
+  "Mexican",
+  "Chinese",
+  "Indian",
+];
 const newArr = []
-for(let i = 0; i < countries.length; i++){
-  newArr.push(countries[i].toUpperCase())
+for(let i = 0; i < cuisines.length; i++){
+  newArr.push(cuisines[i].toUpperCase())
 }
 
-console.log(newArr)  // ["FINLAND", "SWEDEN", "NORWAY", "DENMARK", "ICELAND"]
+console.log(newArr)  // ["ITALIAN", "MEXICAN", "CHINESE", "INDIAN"]
 ```
 
 ### while loop
@@ -155,21 +153,19 @@ for (const num of numbers) {
 }
 console.log(sum) // 15
 
-const webTechs = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'Redux',
-  'Node',
-  'MongoDB'
-]
+const jsFrameworks = [
+  "React",
+  "Angular",
+  "Vue.js",
+  "Ember.js",
+  "Node.js"
+];
 
-for (const tech of webTechs) {
+for (const tech of jsFrameWorks) {
   console.log(tech.toUpperCase())
 }
 
-// HTML CSS JAVASCRIPT REACT NODE MONGODB
+// REACT ANGULAR VUE.JS EMBER.JS NODE.JS 
 
 for (const tech of webTechs) {
   console.log(tech[0]) // get only the first letter of each element,  H C J R N M
@@ -219,7 +215,13 @@ for(let i = 0; i <= 5; i++){
 // 0 1 2 4 5
 ```
 
-🌕 You are so brave, you made it to this far. Now, you have gained the power to automate repetitive and tedious tasks. You have just completed day 6 challenges and you are 6 steps a head in to your way to greatness. Now do some exercises for your brain and for your muscle.
+Congratulations! 🎉🥳
+
+You've completed the module! 🌟
+
+Well done on your achievement! 🙌👏
+
+Keep up the great work! 💪🚀
 
 ## 💻 Exercises:Day 6
 

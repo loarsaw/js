@@ -13,26 +13,46 @@ sidebar_position: 3
 
 🌟 JavaScript offers various methods to create arrays. Let's explore these diverse ways to craft arrays.
 
-It is very common to use _const_ instead of _let_ to declare an array variable. If you ar using const it means you do not use that variable name again.
-
-- Using Array constructor
-
-```js
-// syntax
-const arr = Array()
-// or
-// let arr = new Array()
-console.log(arr) // []
-```
+It is very common to use _const_ instead of _let_ to declare an array variable. If you ar using const it means you do not use that variable name again.****
 
 - Using square brackets([])
 
 ```js
 // syntax
 // This the most recommended way to create an empty list
-const arr = []
+const array = []
 console.log(arr)
 ```
+
+- Using Array constructor
+
+```js
+// syntax
+const array = Array()
+or
+const array = new Array()
+console.log(arr) // []
+```
+
+:::info
+Declaring a variable as const only means that you cannot assign a new value to that variable once a value has been assigned:
+
+```
+const array = [];
+array = []; // Not allowed: assignment to constant variable
+```
+Declaring an array as const has no bearing on what you can do with the contents of the actual array:
+
+```
+const array = [];
+array.push("something"); // Allowed: add value to array
+array[0] = "or other";   // Allowed: replace value in array
+array.length = 0;        // Allowed: change array size
+```
+
+:::
+
+Source : [StackOverflow](https://stackoverflow.com/a/61517230)
 
 ### How to create an array with values
 
@@ -68,43 +88,16 @@ console.log('Number of countries:', countries.length)
 ```
 
 
-- Array can have items of different data types
+- In JavaScript, arrays can indeed have elements of different data types. JavaScript is a loosely typed language, which means that you can store a variety of data types in the same array. This flexibility is one of the language's strengths, allowing you to work with diverse data structures.
 
 ```js
-const arr = [
-    'Asabeneh',
-    250,
-    true,
-    { country: 'Finland', city: 'Helsinki' },
-    { skills: ['HTML', 'CSS', 'JS', 'React', 'Python'] }
-] // arr containing different data types
+const arr = [1, 'apple', true, { name: 'John' }, null, undefined];
+
+console.log(mixedArray); // Outputs: [1, 'apple', true, { name: 'John' }, null, undefined]
+
 console.log(arr)
 ```
-
-### Using Split
-
-As we have seen in the earlier section, we can split a string at different positions, and we can change to an array. Let us see the examples below.
-
-```js
-let js = 'JavaScript'
-const charsInJavaScript = js.split('')
-
-console.log(charsInJavaScript) // ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
-
-let companiesString = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
-const companies = companiesString.split(',')
-
-console.log(companies) // ["Facebook", " Google", " Microsoft", " Apple", " IBM", " Oracle", " Amazon"]
-let txt =
-  'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
-const words = txt.split(' ')
-
-console.log(words)
-// the text has special characters think how you can just get only the words
-// ["I", "love", "teaching", "and", "empowering", "people.", "I", "teach", "HTML,", "CSS,", "JS,", "React,", "Python"]
-```
-
-### Accessing array items using index
+### Indexing in an array
 
 We access each element in an array using their index. An array index starts from 0. The picture below clearly shows the index of each element in the array.
 

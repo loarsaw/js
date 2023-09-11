@@ -4,11 +4,15 @@ sidebar_position: 5
 
 # Functions
 
-So far we have seen many builtin JavaScript functions. In this section, we will focus on custom functions. What is a function? Before we start making functions, lets understand what function is and why we need function?
+In JavaScript, a function is like a 🧩 puzzle piece that you can use to organize and structure your code. It's a reusable block of code that performs a specific task or set of tasks, making your code more modular and easier to manage. 🛠️
 
-A function is a reusable block of code or programming statements designed to perform a certain task.
-A function is declared by a function key word followed by a name, followed by parentheses (). A parentheses can take a parameter. If a function take a parameter it will be called with argument. A function can also take a default parameter. To store a data to a function, a function has to return certain data types. To get the value we call or invoke a function.
-Function makes code:
+Functions help you avoid repeating the same code over and over again, which is known as the DRY (Don't **Repeat** Yourself) principle. This makes your code more efficient and less prone to errors. 🚀
+
+Here's a simple example of why you might need a function:
+
+Imagine you're building a 🍔 burger ordering app. You need to calculate the total cost of a burger, which includes the price of the patty, cheese, toppings, and tax. Instead of writing the same calculation code every time someone orders a burger, you can create a function called calculateBurgerCost() that takes all these ingredients as inputs and returns the total cost. 🍔💰
+
+So, functions in JavaScript are like your code's 🏗️ building blocks, allowing you to create organized, reusable, and efficient code. They make your code easier to read, maintain, and expand upon as your project grows. 🌱
 
 - clean and easy to read
 - reusable
@@ -26,7 +30,7 @@ A function can be declared or created in couple of ways:
 Let us see how to declare a function and how to call a function.
 
 ```js
-//declaring a function without a parameter
+// non parameterized function
 function functionName() {
   // code goes here
 }
@@ -41,65 +45,98 @@ Function can be declared without a parameter.
 
 ```js
 // function without parameter,  a function which make a number square
-function square() {
+function cube() {
   let num = 2
-  let sq = num * num
+  let sq = num * num * num
   console.log(sq)
 }
 
-square() // 4
+square() // 8
 
 // function without parameter
-function addTwoNumbers() {
-  let numOne = 10
-  let numTwo = 20
-  let sum = numOne + numTwo
+function multiplyTwo() {
+  let numOne = 5
+  let numTwo = 4
+  let ans = numOne * numTwo
 
-  console.log(sum)
+  console.log(ans)
 }
 
-addTwoNumbers() // a function has to be called by its name to be executed 
+multiplyTwo() // a function has to be called by its name to be executed 
 ```
 
 ```js
-  function printFullName (){
-      let firstName = 'Asabeneh'
-      let lastName = 'Yetayeh'
-      let space = ' '
-      let fullName = firstName + space + lastName
+  function  fullName(){
+      let firstName = 'Jade'
+      let lastName = 'White'
+      let fullName = firstName + ' ' + lastName
       console.log(fullName)
 }
 
-printFullName() // calling a function
+fullName() // calling a function
 ```
 
 ### Function returning value
 
-Function can also return values, if a function does not return values the value of the function is undefined. Let us write the above functions with return. From now on, we return value to a function instead of printing it.
+A function may or may not return a value we saw above the functions that does not return a value Now let us write the above functions with return. From now on, we return value to a function instead of printing it.
 
 ```js
-function printFullName (){
-      let firstName = 'Asabeneh'
-      let lastName = 'Yetayeh'
-      let space = ' '
-      let fullName = firstName + space + lastName
+function printFullName(){
+      let firstName = 'Jade'
+      let lastName = 'White'
+      let fullName = firstName + ' ' + lastName
       return fullName
 }
-console.log(printFullName())
+
+const result = printFullName()
+
+console.log(result)
 ```
 
 ```js
 
   function addTwoNumbers() {
-      let numOne = 2
-      let numTwo = 3
-      let total = numOne + numTwo
+      let first = 5
+      let second = 5
+      let total = =first + second
       return total
-
   }
 
 console.log(addTwoNumbers())
 ```
+
+:::tip
+
+Output
+
+```js
+  function idkFunction() {
+      let first = 5
+      let second = '5'
+      let total = =first + second
+      return total
+  }
+
+  const result = idkFunction()
+
+console.log(result)
+```
+
+```js
+  function idcFunction() {
+      let first = 5
+      let second = '5'
+      let total = =first - second
+      return total
+  }
+
+  const result = idcFunction()
+
+console.log(result)
+```
+
+:::
+
 
 ### Function with a parameter
 
